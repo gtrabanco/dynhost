@@ -1,0 +1,6 @@
+.DS*
+._*
+*my-secrets*
+node_modules*
+.idea*
+.git

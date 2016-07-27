@@ -1,0 +1,33 @@
+{
+  "name": "node-dynhost",
+  "version": "0.1.0",
+  "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gtrabanco/node-dynhost.git"
+  },
+  "keywords": [
+    "dynhost",
+    "dynamic",
+    "ip",
+    "dns",
+    "host",
+    "nat",
+    "dhcp"
+  ],
+  "author": "Gabriel Trabanco Llano",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/gtrabanco/node-dynhost/issues"
+  },
+  "homepage": "https://github.com/gtrabanco/node-dynhost#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "ovh": "git://github.com/ovh/node-ovh.git",
+    "yargs": "^4.8.1"
+  }
+}
