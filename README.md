@@ -36,7 +36,7 @@ $ crontab -l
 You should read "crontab: no crontab for" and your computer/server `username.
 
 ```bash
-$ echo "*/5 * * * * node `pwd` --domain example.com --subdomain mydynamicserver" >> mycronjobs
+$ echo "*/5 * * * * node `pwd` --domain example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
 $ crontab mycronjobs
 ```
 
