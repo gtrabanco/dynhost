@@ -4,3 +4,7 @@
 node_modules*
 .idea*
 .git
+bin/custom.sh
+.env
+*.log
+mycronjobs
