@@ -7,7 +7,7 @@ A valid app token on Ovh API see: (Cretate Token)[https://api.ovh.com/createToke
 
 ## Runing the app
 
-First of all you need to modify `.env-dist with the values of the app token and save it as ``.env in this dir.
+First of all you need to modify `.env-dist` with the values of the app token and save it as `.env` in this dir.
 
 The app was though to run with the command
 ```bash
