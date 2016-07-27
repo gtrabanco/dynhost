@@ -27,7 +27,7 @@ let argv = require('yargs').
         type: 'string'
     }).
     option('zone', {
-        alias: 'z',
+        alias: ['z', 'domain', 'd'],
         describe: 'Choose the zone to update',
         type: 'string'
     }).
