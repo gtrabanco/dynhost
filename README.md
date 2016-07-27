@@ -17,30 +17,31 @@ The app was though to run with the command
 For more information about the usage run:
 ```bash
 # node . -h
-``
+```
 
 You should consider run it as cronjob every 5 minute (for example) its ok:
 
 First of all if you have more crontab jobs you must do:
 ```bash
 $ crontab -l > mycronjobs
-``
+```
 
 **NOTE:** if you do not know if you have exec first:
 ```bash
 $ crontab -l
 ```
+
 You should read "crontab: no crontab for" and your computer/server `username.
 
 ```bash
 $ echo "*/5 * * * * node `pwd` --domain example.com --subdomain mydynamicserver" >> mycronjobs
 $ crontab mycronjobs
-``
+```
 
 To delete the crontab job just exec
 ```bash
 $ crontab -e
-``
+```
 And delete the line of the crontab you do not want to exec anymore.
 
 ## License
