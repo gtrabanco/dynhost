@@ -1,7 +1,8 @@
 "use strict";
 
-//Require dotenv
-require('dotenv').config({path: __dirname + '/.env'});
+//Requires
+let path = require('path');
+require('dotenv').config({path: path.join(__dirname, '/.env')});
 
 //The ip url service that responds with a json with the format:
 // { ip: "A.B.C.D" }
