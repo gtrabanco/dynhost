@@ -3,7 +3,7 @@
 ## Requirements
 
 Tested under node v. 5.10.1 under Mac OS X 10.11.5
-A valid app token on Ovh API see: (Cretate Token)[https://api.ovh.com/createToken/] (**ADVICE:** If you have created an app instead of token, you must go next step to generate a "Consumer Key")
+A valid app token on Ovh API see: [Cretate Token](https://api.ovh.com/createToken/) (**ADVICE:** If you have created an app instead of token, you must go next step to generate a "Consumer Key")
 
 ## The Token
 
