@@ -2,11 +2,31 @@
 
 //Requires
 let path = require('path');
-require('dotenv').config({path: path.join(__dirname, '/.env')});
+
+//First have a look if there is any .env file everywhere and load it if it is
+const fs = require('fs');
+
+//Checking where is .env file
+var dotfile = null;
+let paths = ['.env', path.join(__dirname, '.env'), path.join('~', '.env')];
+paths.forEach(function (k, v) {
+    try {
+        fs.accessSync(v, fs.F_OK | fs.R_OK);
+        return (dotfile = v);
+    } catch (e) {
+        //Do nothing
+    }
+});
+
+//Loading .env file
+if (dotfile !== null) {
+    require('dotenv').config({path: dotfile});
+}
+
 
 //The ip url service that responds with a json with the format:
 // { ip: "A.B.C.D" }
-let ipUrl = "http://ip.fwok.org";
+let ipUrl = process.env.IP_SERVICE || "http://ip.fwok.org";
 
 //First check if we have the api access
 if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.CONSUMER_KEY) {
@@ -37,22 +57,3 @@ if (!argv.ip) {
 } else {
     updateDNS(argv.zone, argv.subdomain, argv.ip);
 }
-
-
-//Update the record with the id
-//  /domain/zone/{zoneName}/dynHost/record/{id}
-//    Post data: { ip: "", subDomain: "athome" }
-// "null" if correct if not Status code: Bad Request (400)
-//  and the json data:
-//     { "message": "[ip] Given data (192.168.0.1.1) is not valid for type ip" }
-
-//Check that is updated correctly:
-//  /domain/zone/{zoneName}/dynHost/record/{id}
-// And you will get:
-// {
-//    ip: "127.0.0.1",
-//    zone: "1k8b.com",
-//    id: 1397091311,
-//    subDomain: "athome"
-// }
-// */
