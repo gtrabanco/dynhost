@@ -1,6 +1,6 @@
 {
   "name": "node-dynhost",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "main": "index.js",
   "scripts": {

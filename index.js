@@ -14,52 +14,28 @@ if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.CONSUMER_KEY
     process.exit(0);
 }
 
-// Parameters
-let argv = require('yargs').
-    usage('Usage: $0 -type <A|AA> -zone <DNS Zone> -ip <A.B.C.D>').
-    help('h').
-    alias('h', 'help').
-    example('$0 -type A --zone fwok.org --subdomain athome -ip 127.0.0.1').
-    option('type', {
-        alias: 't',
-        describe: 'Choose the record type',
-        choices: ['A', 'AA'],
-        default: 'A',
-        type: 'string'
-    }).
-    option('zone', {
-        alias: ['z', 'domain', 'd'],
-        describe: 'Choose the zone to update',
-        type: 'string'
-    }).
-    option('subdomain', {
-        alias: 's',
-        describe: 'Choose the subdomain of the zone to update',
-        type: 'string'
-    }).
-    option('ip', {
-        describe: 'The value if not the program will try to get the ip address from internet.',
-        type: 'string'
-    }).demand(['zone', 'subdomain']).argv;
+// Args
+var argv = require('./lib/myyargs');
+
+//Ovh
+if (argv.credentials) {
+    require('./lib/credentials');
+    process.exit();
+}
 
 
 //Required stuff
 let updateDNS = require('./lib/updateDNS');
-let ovh = require('ovh')({
-    appKey: process.env.APP_KEY,
-    appSecret: process.env.APP_SECRET,
-    consumerKey: process.env.CONSUMER_KEY
-});
 
 
 //Get the remote ip address if there is no ip as param
 var ip = argv.ip;
 if (!argv.ip) {
     require('./lib/httpGETJSON')(ipUrl).then(function (res) {
-        updateDNS(ovh, argv.zone, argv.subdomain, res.ip);
+        updateDNS(argv.zone, argv.subdomain, res.ip);
     });
 } else {
-    updateDNS(ovh, argv.zone, argv.subdomain, argv.ip);
+    updateDNS(argv.zone, argv.subdomain, argv.ip);
 }
 
 

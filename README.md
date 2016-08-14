@@ -3,7 +3,12 @@
 ## Requirements
 
 Tested under node v. 5.10.1 under Mac OS X 10.11.5
-A valid app token on Ovh API see: (Cretate Token)[https://api.ovh.com/createToken/]
+A valid app token on Ovh API see: (Cretate Token)[https://api.ovh.com/createToken/] (**ADVICE:** If you have created an app instead of token, you must go next step to generate a "Consumer Key")
+
+## The Token
+
+You can generate a new consumer key (needed to make api calls) with the permissions you need to run with program just adding `--credentials` param.
+This will give you a JSON with an url that you may copy and paste in your browser and **validate manually** and copy/paste the "Consumer Key" to your `.env` file.
 
 ## Runing the app
 

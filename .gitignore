@@ -8,3 +8,4 @@ bin/custom.sh
 .env
 *.log
 mycronjobs
+npm-debug*.log*
