@@ -1,4 +1,8 @@
+#! /usr/bin/env node
+
 "use strict";
+
+process.title = "Node-DynHost";
 
 // Args
 var argv = require('./lib/myyargs');

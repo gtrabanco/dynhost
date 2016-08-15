@@ -4,6 +4,9 @@
 
 process.title = "Node-DynHost";
 
+
+let resolve = require('resolve');
+
 //process.exit();
 
-require('../index.js');
+require(resolve('../index', {basedir: __dirname}));
