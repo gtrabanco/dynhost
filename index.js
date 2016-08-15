@@ -23,7 +23,6 @@ const fs = require('fs');
 var dotfile = null;
 
 
-console.log(argv.envfile);
 if (argv.envfile) {
     try {
         fs.accessSync(argv.envfile, fs.F_OK | fs.R_OK);
@@ -47,7 +46,6 @@ if (argv.envfile) {
 if (dotfile !== null) {
     require('dotenv').config({path: dotfile});
 }
-
 
 
 //The ip url service that responds with a json with the format:
