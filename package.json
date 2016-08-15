@@ -1,14 +1,10 @@
 {
   "name": "node-dynhost",
-  "version": "0.3.0g",
+  "version": "0.3.0h",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
-  "main": "bin/node-dynhost",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ."
-  },
-  "bin": {
-    "node-dynhost": "bin/node-dynhost"
   },
   "files": [
     "bin",
@@ -39,5 +35,9 @@
     "dotenv": "^2.0.0",
     "ovh": "git://github.com/ovh/node-ovh.git",
     "yargs": "^4.8.1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "node-dynhost": "bin/node-dynhost"
   }
 }
