@@ -2,4 +2,5 @@
 
 process.title = "Node-DynHost";
 
-require('../index');
+let path = require('path');
+require(path.join(path.dirname(__dirname),'index'));
