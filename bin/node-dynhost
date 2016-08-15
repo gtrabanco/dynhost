@@ -2,4 +2,4 @@
 
 process.title = "Node-DynHost";
 
-require('..');
+require('../index');
