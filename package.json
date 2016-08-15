@@ -1,6 +1,6 @@
 {
   "name": "node-dynhost",
-  "version": "0.3.0f",
+  "version": "0.3.0g",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "main": "bin/node-dynhost",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "node ."
   },
   "bin": {
-    "grunt": "bin/node-dynhost"
+    "node-dynhost": "bin/node-dynhost"
   },
   "files": [
     "bin",
