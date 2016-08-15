@@ -22,7 +22,6 @@ const fs = require('fs');
 //Checking where is .env file
 var dotfile = null;
 
-console.log("Args: ", argv.envfile, fs.accessSync(argv.envfile, fs.F_OK));
 if (argv.envfile) {
     try {
         fs.accessSync(argv.envfile, fs.F_OK | fs.R_OK);
