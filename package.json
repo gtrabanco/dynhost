@@ -1,6 +1,6 @@
 {
   "name": "node-dynhost",
-  "version": "0.3.0i",
+  "version": "0.3.0j",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
