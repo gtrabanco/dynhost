@@ -4,5 +4,6 @@
 
 process.title = "Node-DynHost";
 
-let path = require('path');
-require(path.join(path.dirname(__dirname),'index.js'));
+//process.exit();
+
+require('../index.js');

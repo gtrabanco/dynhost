@@ -27,7 +27,7 @@ if (argv.envfile) {
         
     }
 } else {
-    let paths = ['.env', path.join(__dirname, '.env'), path.join('~', '.env')];
+    let paths = ['.env', path.join(process.cwd(), '.env'), path.join(__dirname, '.env'), path.join('~', '.env')];
     paths.forEach(function (k, v) {
         try {
             fs.accessSync(v, fs.F_OK | fs.R_OK);
