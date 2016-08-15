@@ -1,2 +1,5 @@
 #! /usr/bin/env node
+
+process.title = "Node-DynHost";
+
 require('..');
