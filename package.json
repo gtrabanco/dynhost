@@ -1,12 +1,19 @@
 {
   "name": "node-dynhost",
-  "version": "0.3.0e",
+  "version": "0.3.0f",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "main": "bin/node-dynhost",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ."
   },
+  "bin": {
+    "grunt": "bin/node-dynhost"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/gtrabanco/node-dynhost.git"
@@ -21,7 +28,8 @@
     "dhcp"
   ],
   "author": "Gabriel Trabanco Llano",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "LICENSE.md",
+  "readme": "README.md",
   "bugs": {
     "url": "https://github.com/gtrabanco/node-dynhost/issues"
   },
