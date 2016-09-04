@@ -1,11 +1,11 @@
 {
   "name": "dynhost",
-  "version": "0.3.3beta8",
+  "version": "0.3.3beta9",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
-    "install": "npm link && echo \"Node-Dynhost isntalled, see dynhost --help to get help.\""
+    "install": "echo \"Node-Dynhost isntalled, see dynhost --help to get help.\""
   },
   "files": [
     "./bin",
