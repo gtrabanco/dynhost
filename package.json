@@ -4,7 +4,8 @@
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node .",
+    "install": "npm link && echo \"Node-Dynhost isntalled, see dynhost --help to get help.\""
   },
   "files": [
     "./bin",
@@ -37,7 +38,6 @@
     "yargs": "^4.8.1"
   },
   "private": true,
-
   "preferGlobal": true,
   "bin": {
     "dynhost": "./index.js"
