@@ -1,5 +1,5 @@
 {
-  "name": "node-dynhost",
+  "name": "DynHost",
   "version": "0.3.3beta5",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {

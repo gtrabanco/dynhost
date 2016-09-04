@@ -4,8 +4,18 @@
 
 process.title = "Node-DynHost";
 
+//Get the program information
+var packageInfo = require('./lib/packageInfo').packageInfo('package.json');
+
 // Args
 var argv = require('./lib/myyargs');
+
+// Show version?
+if (argv.version) {
+    // https://developers.google.com/web/tools/chrome-devtools/debug/console/console-write#string-substitution-and-formatting
+    console.log('%s v%s', packageInfo.name, packageInfo.version);
+    process.exit();
+}
 
 //Ovh Credentials
 if (argv.credentials) {
