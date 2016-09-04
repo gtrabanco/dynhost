@@ -13,7 +13,7 @@ var argv = require('./lib/myyargs');
 // Show version?
 if (argv.version) {
     // https://developers.google.com/web/tools/chrome-devtools/debug/console/console-write#string-substitution-and-formatting
-    console.log('%s v%s', packageInfo.name, packageInfo.version);
+    console.log('DynHost %s', packageInfo.name, packageInfo.version);
     process.exit();
 }
 
