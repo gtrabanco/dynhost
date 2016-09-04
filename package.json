@@ -36,6 +36,8 @@
     "ovh": "git://github.com/ovh/node-ovh.git",
     "yargs": "^4.8.1"
   },
+  "private": true,
+
   "preferGlobal": true,
   "bin": {
     "dynhost": "./index.js"
