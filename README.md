@@ -19,23 +19,23 @@ You can get this little app from [github](http://github.com/gtrabanco/node-dynho
 To get the app and run it with npm you should exec:
 
 ```bash
-$ npm install -g node-dynhost
+$ npm install -g dynhost
 ```
 
 ## Runing the app
 
 First of all you need to run `npm install`.
 
-After that modify `.env-dist` with the values of the app token and save it as `.env` in the dir where you will exec node-dynhost, in node-dynhost app or your home (~) path.
+After that modify `.env-dist` with the values of the app token and save it as `.env` in the dir where you will exec node-dynhost command line program or your home (~) path.
 
 The app was though to run with the command
 ```bash
-# node-dynhost --zone example.com --subdomain mydynamicserver
+# dynhost --zone example.com --subdomain mydynamicserver
 ```
 
 For more information about the usage run:
 ```bash
-# node-dynhost -h
+# dynhost -h
 ```
 
 You should consider run it as cronjob every 5 minute (for example) its ok:
@@ -53,7 +53,7 @@ $ crontab -l
 You should read "crontab: no crontab for" and your computer/server `username.
 
 ```bash
-$ echo "*/5 * * * * `whereis node-dynhost` --zone example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
+$ echo "*/5 * * * * `whereis dynhost` --zone example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
 $ crontab mycronjobs
 ```
 
