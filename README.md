@@ -24,13 +24,19 @@ $ npm install -g dynhost
 
 ## Runing the app
 
-First of all you need to run `npm install`.
+First of all you need to run `npm install` if you have it downloaded directly from GitHub.
 
-After that modify `.env-dist` with the values of the app token and save it as `.env` in the dir where you will exec node-dynhost command line program or your home (~) path.
+After that modify `.env-dist` with the values of the app token and save it as `.env` in the dir where you will exec `dynhost` command line program or your home (~) path. Anyway, you will be able to choose your `.env` file with some cli program params.
 
 The app was though to run with the command
 ```bash
 # dynhost --zone example.com --subdomain mydynamicserver
+```
+
+To run with your own configuration file whatever you store it use:
+
+```bash
+# dynhost --env /path/to/my/.env --zone example.com --subdomain mydynamicserver
 ```
 
 For more information about the usage run:
