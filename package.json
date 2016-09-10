@@ -1,6 +1,6 @@
 {
   "name": "dynhost",
-  "version": "0.3.3beta13",
+  "version": "0.3.3beta15",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/gtrabanco/node-dynhost.git"
+    "url": "git+ssh://git@github.com/gtrabanco/dynhost.git"
   },
   "keywords": [
     "dynhost",
@@ -27,9 +27,9 @@
   "license": "Unlicense",
   "readme": "README.md",
   "bugs": {
-    "url": "https://github.com/gtrabanco/node-dynhost/issues"
+    "url": "https://github.com/gtrabanco/dynhost/issues"
   },
-  "homepage": "https://github.com/gtrabanco/node-dynhost#readme",
+  "homepage": "https://github.com/gtrabanco/dynhost#readme",
   "devDependencies": {},
   "dependencies": {
     "dotenv": "^2.0.0",
