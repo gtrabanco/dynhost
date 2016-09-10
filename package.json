@@ -1,6 +1,6 @@
 {
   "name": "dynhost",
-  "version": "0.3.4",
+  "version": "0.3.5beta1",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,11 +21,8 @@
     "ovh"
   ],
   "author": "Gabriel Trabanco Llano <gtrabanco@fwok.org> (https://gabi.uno)",
-  "license": {
-    "type": "Unlicense",
-    "url": "https://github.com/gtrabanco/dynhost/blob/master/README.md"
-  },
-  "readme": "https://github.com/gtrabanco/dynhost/blob/master/README.md",
+  "license": "Unlicense",
+  "readmeFilename": "README.md",
   "man": "./man/dynhost.1",
   "bugs": {
     "url": "https://github.com/gtrabanco/dynhost/issues"
@@ -35,7 +32,7 @@
   "dependencies": {
     "dotenv": "^2.0.0",
     "ovh": "git://github.com/ovh/node-ovh.git",
-    "yargs": "^4.8.1"
+    "yargs": "^5.0.0"
   },
   "preferGlobal": true,
   "bin-links": true,
