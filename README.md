@@ -14,7 +14,7 @@ This will give you a JSON with an url that you may copy and paste in your browse
 
 ## Getting the app
 
-You can get this little app from [github](http://github.com/gtrabanco/node-dynhost) or through the [npm](https://www.npmjs.com/package/node-dynhost). 
+You can get this little app from [github](http://github.com/gtrabanco/dynhost) or through the [npm](https://www.npmjs.com/package/dynhost). 
  
 To get the app and run it with npm you should exec:
 
@@ -53,7 +53,7 @@ $ crontab -l
 You should read "crontab: no crontab for" and your computer/server `username.
 
 ```bash
-$ echo "*/5 * * * * `whereis dynhost` --zone example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
+$ echo "*/5 * * * * `which dynhost` --zone example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
 $ crontab mycronjobs
 ```
 
