@@ -1,6 +1,6 @@
 {
   "name": "dynhost",
-  "version": "0.3.4beta1",
+  "version": "0.3.4beta2",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,11 +17,16 @@
     "dns",
     "host",
     "nat",
-    "dhcp"
+    "dhcp",
+    "ovh"
   ],
-  "author": "Gabriel Trabanco Llano",
-  "license": "Unlicense",
+  "author": "Gabriel Trabanco Llano <gtrabanco@fwok.org> (https://gabi.uno)",
+  "license": {
+    "type": "Unlicense",
+    "url": "https://github.com/gtrabanco/dynhost/blob/master/README.md"
+  },
   "readme": "https://github.com/gtrabanco/dynhost/blob/master/README.md",
+  "man": ["man/dynhost.doc.1"],
   "bugs": {
     "url": "https://github.com/gtrabanco/dynhost/issues"
   },

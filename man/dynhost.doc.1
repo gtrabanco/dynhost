@@ -1,0 +1,33 @@
+.\" Manpage for nuseradd.
+.\" Contact vivek@nixcraft.net.in to correct errors or typos.
+.TH man 8 "10 Sep 2016" "0.3.4beta2" "DynHost Man Page"
+.SH NAME
+dynhost \- Update DynHost DNS Record on OVH
+.SH SYNOPSIS
+[--envfile </path/to/.env>] [--type <A|AA>] --zone <DNS Zone> --subdomain <subdomain> [--ipaddress <A.B.C.D>]
+.SH DESCRIPTION
+dynhost is a client program to update Dynamic DNS Records on OVH using it API calls.
+.SH OPTIONS
+  --help, -h                       Show help
+  --version, -v                    Get the current installed version
+  --credentials, --credential, -c  Get the link and consumer key for your app.
+                                   See more information in README at:
+                                        https://github.com/gtrabanco/dynhost/blob/master/README.md#the-token
+
+  --type, -t                       The DNS record type "A" (default) or "AA" (ipv6)
+                                   The program will not check if it is a valid IPv4 or IPv6.
+  --zone, -z, --domain, -d         The zone to update (domain)
+  --subdomain, -s                  The subdomain of the zone to update
+  --envfile, --env, -e             The string path (includeing the file) to the .env
+                                   file.
+  --ipaddress, --ip        The value of ip address to update it. If not
+                                   passed the program will try to get the ip
+                                   address from internet. [cadena de caracteres]
+
+.SH EXAMPLES
+dynhost --envfile /home/myuser/.env --type A --zone example.com --subdomain homeserver
+    - It will take the ip address from internet so if you're throught a NAT server it will update with your public ip address.
+.SH BUGS
+See https://github.com/gtrabanco/dynhost/issues
+.SH AUTHOR
+Gabriel Trabanco Llano <gtrabanco@fwok.org> (https://gabi.uno)
