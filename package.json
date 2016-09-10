@@ -1,6 +1,6 @@
 {
   "name": "dynhost",
-  "version": "0.3.4beta2",
+  "version": "0.3.4beta3",
   "description": "Node application to run in a server and update dynamically the dns for a server with dynamic ip address.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,7 +26,7 @@
     "url": "https://github.com/gtrabanco/dynhost/blob/master/README.md"
   },
   "readme": "https://github.com/gtrabanco/dynhost/blob/master/README.md",
-  "man": ["man/dynhost.doc.1"],
+  "man": "./man/dynhost.1",
   "bugs": {
     "url": "https://github.com/gtrabanco/dynhost/issues"
   },
