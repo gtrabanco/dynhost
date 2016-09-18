@@ -13,4 +13,7 @@ RUN npm cache clean && npm install --global dynhost
 
 USER user
 
+WORKDIR /home/user
+VOLUME /home/user/.env
+
 CMD ["/usr/bin/dynhost"]
