@@ -1,7 +1,7 @@
 FROM node:6-slim
 MAINTAINER Gabriel Trabanco Llano <gtrabanco@fwok.org> (https://gabi.uno)
 
-ENV VERSION 0.3.5
+ENV VERSION 0.3.6
 
 RUN groupadd user \
     && useradd --create-home --home-dir /home/user -g user user \
