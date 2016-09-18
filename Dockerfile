@@ -9,7 +9,7 @@ RUN groupadd user \
     && apt-get install -y git --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
 
-RUN npm install -g dynhost
+RUN npm cache clean && npm install --global dynhost
 
 USER user
 
