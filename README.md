@@ -3,6 +3,11 @@
 
 # Node-DynHost
 
+## Important
+
+In 0.3.7 you will need new kind of access to the api if you are trying to use the new option "--regulardns" so do not forget to generate a new access if you're experimenting problems.
+View `man dynhost` for more help.
+
 ## Requirements
 
 Tested under node v. 5.10.1 under Mac OS X 10.11.5
