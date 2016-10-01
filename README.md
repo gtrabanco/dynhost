@@ -1,6 +1,10 @@
 **NOTE:** Usage with Docker pending to be documented. To try you can pass the `ENV` vars with Docker or usage of docker `--envfile`.
 [See the Docker Hub Page](https://hub.docker.com/r/gtrabanco/dynhost)
 
+## IMPORTANT!
+
+Due to I was injured in my hand I can not keep working on this for a time. **Use 0.3.6** (last stable) version and not 0.3.7 (it will fail)
+
 # Node-DynHost
 
 ## Requirements
