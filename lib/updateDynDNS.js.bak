@@ -3,35 +3,34 @@
 var ovh = require('./myovh');
 
 
-module.exports = function (zoneName, subdomain, ip, type = 'A', ttl = 0) {
+module.exports = function (zoneName, subdomain, ip) {
     
     //First get the record id (GET)
-    // /domain/zone/{zoneName}/record
+    // /domain/zone/{zoneName}/dynHost/record
     return ovh.requestPromised('GET',
-        '/domain/zone/{zoneName}/record',
+        '/domain/zone/{zoneName}/dynHost/record',
         {
             zoneName: zoneName,
-            fieldType: type,
             subDomain: subdomain
-        })
-    .then(function(res){
+        }).
+    then(function(res){
 
         let id = res[0];
 
         return ovh.requestPromised('PUT',
-            '/domain/zone/{zoneName}/record/{id}',
+            '/domain/zone/{zoneName}/dynHost/record/{id}',
             {
                 zoneName: zoneName,
                 id: id,
-                target: ip,
-                subDomain: subdomain,
-                ttl: ttl || 60
+                ip: ip,
+                subDomain: subdomain
             });
 
     })
     .catch(function (err) {
 
         console.error('Error: ', err);
+        console.warn('Error trying to get the zone id for the subdomain.');
         process.exit(1);
     });
 };

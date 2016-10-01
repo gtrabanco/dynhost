@@ -61,7 +61,7 @@ if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.CONSUMER_KEY
 
 //Required stuff
 var updateDNS = null;
-if (process.env.regulardns) {
+if (argv.regulardns) {
     updateDNS = require('./lib/updateDNS');
 } else {
     updateDNS = require('./lib/updateDynDNS')
@@ -72,8 +72,8 @@ if (process.env.regulardns) {
 var ip = argv.ip;
 if (!argv.ip) {
     require('./lib/httpGETJSON')(ipUrl).then(function (res) {
-        updateDNS(argv.zone, argv.subdomain, res.ip);
+        updateDNS(argv.zone, argv.subdomain, res.ip, argv.type || 'A', 0);
     });
 } else {
-    updateDNS(argv.zone, argv.subdomain, argv.ip);
+    updateDNS(argv.zone, argv.subdomain, argv.ip, argv.type || 'A', 0);
 }
