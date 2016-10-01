@@ -60,7 +60,11 @@ if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.CONSUMER_KEY
 
 
 //Required stuff
-let updateDNS = require('./lib/updateDNS');
+if (process.env.regulardns) {
+    let updateDNS = require('./lib/updateDNS');
+} else {
+    let updateDNS = require('./lib/updateDynDNS')
+}
 
 
 //Get the remote ip address if there is no ip as param
