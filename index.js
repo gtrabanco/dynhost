@@ -60,10 +60,11 @@ if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.CONSUMER_KEY
 
 
 //Required stuff
+var updateDNS = null;
 if (process.env.regulardns) {
-    let updateDNS = require('./lib/updateDNS');
+    updateDNS = require('./lib/updateDNS');
 } else {
-    let updateDNS = require('./lib/updateDynDNS')
+    updateDNS = require('./lib/updateDynDNS')
 }
 
 
