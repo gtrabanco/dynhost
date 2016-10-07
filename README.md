@@ -1,4 +1,4 @@
-**NOTE:** Usage with Docker pending to be documented. To try you can pass the `ENV` vars with Docker or usage of docker `--envfile`.
+> **NOTE:** Usage with Docker pending to be documented. To try you can pass the `ENV` vars with Docker or usage of docker `--envfile`.
 [See the Docker Hub Page](https://hub.docker.com/r/gtrabanco/dynhost)
 
 # Node-DynHost
