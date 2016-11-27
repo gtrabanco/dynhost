@@ -14,11 +14,12 @@ if (argv.credentials) {
 }
 
 //Requires
-let path = require('path');
+const path = require('path');
+const fs = require('fs');
+const request = require('request');
+
 
 //First have a look if there is any .env file everywhere and load it if it is
-const fs = require('fs');
-
 //Checking where is .env file
 var dotfile = null;
 
@@ -50,7 +51,7 @@ if (dotfile !== null) {
 
 //The ip url service that responds with a json with the format:
 // { ip: "A.B.C.D" }
-let ipUrl = process.env.IP_SERVICE || "http://ip.fwok.org";
+let ipUrl = process.env.IP_SERVICE || "https://ip.rqe.es";
 
 //First check if we have the api access
 if (!process.env.APP_KEY || !process.env.APP_SECRET || !process.env.CONSUMER_KEY) {
@@ -71,8 +72,22 @@ if (argv.regulardns) {
 //Get the remote ip address if there is no ip as param
 var ip = argv.ip;
 if (!argv.ip) {
-    require('./lib/httpGETJSON')(ipUrl).then(function (res) {
-        updateDNS(argv.zone, argv.subdomain, res.ip, argv.type || 'A', 0);
+
+    let ops = {
+        //The ip url service that responds with a json with the format:
+        // { data: { ip: "A.B.C.D" }}
+        url: process.env.IP_SERVICE || "https://ip.rqe.es",
+        headers: {
+            "user-agent": "DynHost"
+        }
+    };
+
+    request(ops, function (err, res, body) {
+        if ( !err && response.statusCode == 200 && body && body.data && body.data.ip ) {
+            updateDNS(argv.zone, argv.subdomain, body.data.ip, argv.type || 'A', 0);
+        } else {
+            return console.warn("Error while trying to get the ip address.");
+        }
     });
 } else {
     updateDNS(argv.zone, argv.subdomain, argv.ip, argv.type || 'A', 0);
