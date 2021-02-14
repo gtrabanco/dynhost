@@ -1,5 +1,5 @@
 FROM node:6-slim
-MAINTAINER Gabriel Trabanco Llano <gtrabanco@fwok.org> (https://gabi.uno)
+MAINTAINER Gabriel Trabanco Llano <gtrabanco@fwok.org> (https://gabi.io)
 
 ENV VERSION 0.3.6
 
