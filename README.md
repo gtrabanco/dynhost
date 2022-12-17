@@ -2,7 +2,7 @@
 [See the Docker Hub Page](https://hub.docker.com/r/gtrabanco/dynhost)
 
 # Important 2021 Update
-Do not know if this program still fork I did not use it for a long time if you are interested in this client and does not work you can do a PR or open a Issue in Github. Sorry.
+Do not know if this program still work I did not use it for a long time if you are interested in this client and does not work you can do a PR or open a Issue in Github. Sorry.
 
 # Node-DynHost
 
@@ -14,7 +14,7 @@ View `man dynhost` for more help.
 ## Requirements
 
 Tested under node v. 5.10.1 under Mac OS X 10.11.5
-A valid app token on Ovh API see: [Cretate Token](https://api.ovh.com/createToken/)
+A valid app token on Ovh API see: [Create Token](https://api.ovh.com/createToken/)
 
 **ADVICE:** If you have created an app instead of token, you must go next step to generate a "Consumer Key".
 
