@@ -70,7 +70,7 @@ $ crontab -l
 You should read "crontab: no crontab for" and your computer/server `username.
 
 ```bash
-$ echo "*/5 * * * * `which dynhost` --zone example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
+$ echo "*/5 * * * * \"$(command -v dynhost)\" --zone example.com --subdomain mydynamicserver > /dev/null" >> mycronjobs
 $ crontab mycronjobs
 ```
 
